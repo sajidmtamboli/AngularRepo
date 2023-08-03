@@ -1,0 +1,66 @@
+<div class = "container">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+       <h2>Mobile Number Link to bank Account online form</h2>
+       <div class = "form-row">
+          <div class = "form-group col-md-6">
+             <label for = "inputEmail4">First Name</label>
+             <input type = "text" #firstname="ngModel" class =" form-control" 
+                id = "First Name" name="First Name" ngModel placeholder = "First Name" required>
+                <small *ngIf="firstname.touched && !firstname.valid" class="text-danger font-weight-bold">Please enter first name</small>
+                
+          </div>
+          <div class = "form-group col-md-6">
+             <label for = "inputPassword4">Last Name</label>
+             <input type = "text" #lastname="ngModel" class = "form-control" 
+                id = "Last Name" name="Last Name" ngModel placeholder = "Last Name"  required >
+                <small *ngIf="lastname.touched && !lastname.valid" class="text-danger font-weight-bold">Please enter last name</small>
+          </div>
+       </div>
+       <div class = "form-row">
+       <div class = "form-group col-md-6">
+          <label for = "inputAddress">Address</label> 
+          <input type = "text" #address1="ngModel" class = "form-control" id = "inputAddress" name="inputAddress" ngModel
+             placeholder = "Address" required>
+             <small *ngIf="address1.touched && !address1.valid" class="text-danger font-weight-bold">Please enter Address</small>
+       </div>
+       <div class = "form-group col-md-6">
+        <label for = "inputNumber">Mobile No</label> 
+        <input type = "text" #mob1="ngModel" class = "form-control" id = "inputNumber" name="inputNumber" ngModel
+           placeholder = "Enter mobile Number" required>
+           <small *ngIf="mob1.touched && !mob1.valid" class="text-danger font-weight-bold">Please enter Mobile number</small>
+     </div>
+    </div>
+       <div class = "form-row">
+          <div class = "form-group col-md-6">
+             <label for = "inputCity">City</label>
+             <input type = "text" class = "form-control" ngModel placeholder = "City" 
+                id = "inputCity"  name="inputCity" ngModel>
+          </div>
+          <div class = "form-group col-md-4">
+             <label for = "inputState">State</label>
+             <select id = "inputState" class = "form-control">
+                <option selected disabled>Select State</option>
+                <option>Maharstra</option>
+                <option>Goa</option>
+             </select>
+          </div> 
+          <div class = "form-group col-md-2">
+             <label for = "inputZip">Pin Code</label>
+             <input type = "text" class = "form-control" id = "inputZip" name="inputZip" ngModel
+                placeholder = "Pin Code">
+          </div>
+       </div>
+       <div class = "form-group">
+          <div class = "form-check">
+             <input class = "form-check-input"  type = "checkbox" id = "gridCheck" >
+             <label class = "form-check-label" for = "gridCheck">
+                I Agree To Terms and Conditions
+             </label>
+          </div>
+       </div>
+       <button type = "submit"  [disabled]="!myForm.valid" class = "btn btn-primary">Submit</button>
+    </form>
+ </div>

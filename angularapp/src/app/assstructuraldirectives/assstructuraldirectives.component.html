@@ -1,0 +1,61 @@
+
+<h1>Using *ngFor</h1>
+<h2> Top 3 IT courses</h2>
+   
+    <div>
+        <table class="table">
+             <thead>
+                <tr>
+                        <th>
+                           Course Name 
+                        </th>
+                        <th>
+                                Mentor
+                        </th>
+                        <th>
+                                Fess
+                        </th>
+                </tr>
+             </thead> 
+             <tbody>
+                <tr *ngFor="let course of topCourse">
+                   <td>{{course.Course}}</td> 
+                   <td>{{course.eName}}</td> 
+                   <td>{{course.Fees}}</td> 
+                </tr>
+                
+             </tbody>          
+        </table>
+
+</div>
+
+<h1>Using ngSwitch</h1>
+
+<div class="container">
+    <div class="col-md-4">
+        <select class="form-control" (change)="getCourse($event)">
+            <option value="Default">Select Course</option>
+            <option value="Angular">Angular</option>
+            <option value="React">React</option>
+            <option value="Java">Java</option>
+        </select>
+    </div>
+    <div class="col-md-12" [ngSwitch]="selectedCourse">
+        <h2 class="text-success" *ngSwitchDefault>Please select Course</h2>
+        <h2 class="text-success" *ngSwitchCase="'Angular'">Angular</h2>
+        <h2 class="text-success" *ngSwitchCase="'React'">React</h2>
+        <h2 class="text-success" *ngSwitchCase="'Java'">Java</h2>
+    </div>
+</div>
+
+<h1>Showing Checkboxes</h1>
+<form action="/action_page.php" *ngIf="showActions">
+    <input type="checkbox" id="Course">
+    <label for="Course"> Angular</label><br>
+    <input type="checkbox" id="Course1">
+    <label for="Course1"> React</label><br>
+    <input type="checkbox" id="Course2">
+    <label for="Course2"> Java</label><br><br>
+    <input type="submit" [disabled]="false" value="Submit">
+  </form>
+   

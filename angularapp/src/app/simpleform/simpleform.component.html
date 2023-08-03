@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-6 text-left rounded shadow py-5">   
+            <h2 class="row justify-content-center"> Login Form</h2>    
+        <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+            <div class="form-group "> 
+                <label for="username">Username </label>             
+                <input class="form-control " type="text" #username1="ngModel" id="username" name="username" ngModel for="username" placeholder="Enter User Name"  required>
+                <small  *ngIf="username1.touched && !username1.valid" class="text-danger font-weight-bold">Please Enter Valid Username...</small>
+            </div> 
+            <div class="form-group">   
+                <label for="email">Email </label>              
+                <input class="form-control" pattern="^[a-zA-Z0-9]+@codemind.com" type="email" #email1="ngModel" id="email" name="email" ngModel for="email" placeholder="Enter Email" email required>
+                <small class="text-danger" *ngIf="email1.touched && !email1.valid">Please Enter Valid @codemind Email id...</small>
+            </div>
+            <div class="form-group">
+                <label for="Select Course">Select Course</label>
+                <select class="form-control" #name1="ngModel" name="course" id="course" ngModel [ngModel]="defaultCourseValue">
+                    <option value="Angular">Angular</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="TypeScript">TypeScript</option>
+                </select>
+                <small class="text-danger" *ngIf="name1.touched && !name1.valid">Please Select any Course</small>
+            </div>
+            <div ngModelGroup="address">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" name="country" id="country" #country="ngModel" class="form-control" ngModel placeholder="Enter Country..." required>
+                    <small class="text-danger" *ngIf="country.touched && !country.valid">Enter Valid Country...</small>                    
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" name="state" id="state" #state="ngModel" class="form-control" ngModel placeholder="Enter State" required>
+                    <small class="text-danger" *ngIf="state.touched && !state.valid">Enter Valid State...</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                   <input class="custom-control-input" type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}" ngModel>
+                   <label class="custom-control-label" for="{{gender.id}}">{{gender.value}}</label>
+                  </div>
+              </div>
+            <button type="submit" [disabled]="!myForm.valid" class="btn btn-success form-control mt-2">Login</button>
+            <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+                <h2 class="text-center">Form Data</h2>
+                  <p>UserName: <strong>{{formData.username}}</strong></p>
+                  <p>Email: <strong>{{formData.email}}</strong></p>
+                  <p>Course: <strong>{{formData.course}}</strong></p>
+                  <p>Country: <strong>{{formData.country}}</strong></p>
+                <p>State: <strong>{{formData.state}}</strong></p>
+                <p>Gender: <strong>{{formData.gender}}</strong></p> 
+                </div>
+        </form>
+    </div>
+    </div>
+    
+</div>

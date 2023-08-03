@@ -1,0 +1,31 @@
+<!-- <div class="container">
+    <h2 class="text-center">*ngFor Assignment</h2>
+    <div class="country col-md-3">
+        <label for="country">Country</label>
+        <select id="country" class="form-control" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+            <option *ngFor="let coun of country">{{coun}}</option>
+        </select>
+    </div> <br><br>
+    <div class="state col-md-3">
+        <label for="State">State</label>
+        <select id="State" class="form-control">
+            <option *ngFor="let state of selectedstate">{{state.name}}</option>
+        </select>
+    </div>
+</div>  -->
+  
+<!-----------------------------First method--------------------------->
+<div class="container">
+    <h2 class="text-center  ">*ngFor Assignment</h2>
+    <div class="country col-md-3">
+        <label for="country">Country</label>
+        <select id="country" class="form-control" [(ngModel)]="selectedCountry">
+            <option *ngFor="let coun of country">{{coun}}</option>
+        </select>
+    </div> <br><br>
+    <div class="state col-md-3">
+        <label for="State">State</label>
+        <select id="State" class="form-control">
+            <option *ngFor="let state of getstates()">{{state}}</option>
+        </select>
+    </div>

@@ -1,0 +1,18 @@
+<p>ngif works!</p>
+
+
+<!-- <p *ngIf="showActions">
+    Content to render when the condition is true </p> -->
+
+    <div *ngIf="showActions">
+        *ngIf example will be work
+    </div>
+
+
+    <div *ngIf="showActions; else elseBlock">
+        Content to render when the condition is true.
+    </div>
+    
+    <ng-template #elseBlock>
+        Content to render when the condition is false.
+    </ng-template>
