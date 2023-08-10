@@ -21,6 +21,9 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AsssimpleformComponent } from './asssimpleform/asssimpleform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { SimpleformassComponent } from './simpleformass/simpleformass.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,13 +44,16 @@ import { SimpleformassComponent } from './simpleformass/simpleformass.component'
     SimpleformComponent,
     AsssimpleformComponent,
     ReactiveformComponent,
-    SimpleformassComponent
+    SimpleformassComponent,
+    Comp1Component,
+    Comp2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
