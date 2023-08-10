@@ -1,6 +1,69 @@
-<p>comp1 works!</p>
+<!-- <p>comp1 works!</p>
 
 <div *ngFor="let product of products">
     {{product.id}} 
     {{product.name}}
-   </div>
+   </div> -->
+
+           <div >
+                    <table class="table" >
+                         <thead>
+                            <tr>
+                                    <th>
+                                       Id     
+                                    </th>
+                                    <th>
+                                            Name
+                                    </th>
+                                    <th>
+                                            username
+                                    </th>
+                                    <th>
+                                            Email
+                                    </th>
+                                    <th>
+                                        Street
+                                </th>
+                                <th>
+                                    Suite
+                            </th>
+                            <th>
+                                city
+                        </th>
+                        <th>
+                            zip code
+                    </th>
+                    <th>
+                        latitudde
+                </th>
+                <th>
+                        longitude
+                </th>
+                <th>
+                        website
+                </th>
+                    <th>                    
+                </th>
+                            </tr>
+                         </thead> 
+                         <tbody>
+                            <tr *ngFor="let user of objUserArray">
+                                   <td> {{user.id}}</td>
+                                   <td> {{user.name}}</td>
+                                   <td> {{user.username}}</td>
+                                   <td> {{user.email}}</td>
+                                   <td> {{user.address.street}}</td>
+                                   <td> {{user.address.suite}}</td>
+                                   <td> {{user.address.city}}</td>
+                                   <td> {{user.address.zipcode}}</td>
+                                   <td> {{user.address.geo.lat}}</td>
+                                   <td> {{user.address.geo.lng}}</td>
+                                   <td> {{user.website}}</td>
+                                 
+                            </tr>
+                         </tbody>          
+                    </table>
+            
+    
+</div>
+
