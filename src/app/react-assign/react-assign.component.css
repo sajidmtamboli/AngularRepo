@@ -1,0 +1,45 @@
+input.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched{
+     border: 2px solid red;
+     box-shadow: 0 0 13px #ff000021;
+}
+
+h1{
+  font-size: 50px;
+  font-weight: 900;
+  background-image: url(https://img.freepik.com/free-photo/multi-colored-abstract-painting-with-bright-blue-yellow-generative-ai_188544-9474.jpg?q=10&h=200);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container{
+  background-color: #d4c8d8;
+}
+  button{
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border: none;
+    color: aliceblue;
+    background-color: lightseagreen;
+    transition: all ease 0.5s;
+  }
+
+  button:hover{
+    box-shadow: 5px 5px black;
+  }
+ label{
+    font-size: larger;
+    font-family: sans-serif;
+   
+ }
+
+input.ng-valid{
+  padding: 10px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+    outline: none;
+}

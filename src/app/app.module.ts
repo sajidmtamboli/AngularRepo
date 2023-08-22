@@ -24,6 +24,14 @@ import { SimpleformassComponent } from './simpleformass/simpleformass.component'
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AssreactiveformComponent } from './assreactiveform/assreactiveform.component';
+import { ReactAssignComponent } from './react-assign/react-assign.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
+import { FilterPipe } from './filter.pipe';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { Asscomp3Component } from './asscomp3/asscomp3.component';
+import { Filterpipe1Pipe } from './filterpipe1.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +54,15 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveformComponent,
     SimpleformassComponent,
     Comp1Component,
-    Comp2Component
+    Comp2Component,
+    AssreactiveformComponent,
+    ReactAssignComponent,
+    PipedemoComponent,
+    CountPipe,
+    FilterPipe,
+    FilterpipeComponent,
+    Asscomp3Component,
+    Filterpipe1Pipe
   ],
   imports: [
     BrowserModule,

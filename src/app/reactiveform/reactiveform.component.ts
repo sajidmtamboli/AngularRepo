@@ -13,7 +13,8 @@ myForm: FormGroup;
 notAllowedNames = ['Codemind', 'Technology'];
 
 constructor() {
-  this.createForm();
+
+  
 }
 genders = [
   { id: 1, value: 'Male' },

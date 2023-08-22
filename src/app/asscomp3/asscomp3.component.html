@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-md-8 mb-2">
+        <label for="productId">Search by Name</label>
+        <input type="text" class="form-control" id="productId" placeholder="Enter  name" [(ngModel)]="namesearch">
+    </div>
+
+    <div >
+        <table class="table" >
+             <thead>
+                <tr>
+                        <th>
+                           Id     
+                        </th>
+                        <th>
+                                Name
+                        </th>
+                        <th>
+                                username
+                        </th>
+                        <th>
+                                Email
+                        </th>
+                        <th>
+                            Street
+                    </th>
+                    <th>
+                        Suite
+                </th>
+                <th>
+                    city
+            </th>
+            <th>
+                zip code
+        </th>
+        <th>
+            latitudde
+    </th>
+    <th>
+            longitude
+    </th>
+    <th>
+            website
+    </th>
+        <th>                    
+    </th>
+                </tr>
+             </thead> 
+             <tbody>
+                <tr *ngFor="let user of objUserArray  | filterpipe1 : namesearch ">
+                       <td> {{user.id}}</td>
+                       <td> {{user.name}}</td>
+                       <td> {{user.username}}</td>
+                       <td> {{user.email}}</td>
+                       <td> {{user.address.street}}</td>
+                       <td> {{user.address.suite}}</td>
+                       <td> {{user.address.city}}</td>
+                       <td> {{user.address.zipcode}}</td>
+                       <td> {{user.address.geo.lat}}</td>
+                       <td> {{user.address.geo.lng}}</td>
+                       <td> {{user.website}}</td>
+                     
+                </tr>
+             </tbody>          
+        </table>
+
+
+</div>

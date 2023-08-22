@@ -1,0 +1,17 @@
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+   box-shadow: brown;
+}
+
+.container{
+    background-color: #10cc1f;
+  }
+
+  button:hover{
+    box-shadow: 5px 5px black;
+  }
+ label{
+    font-size: larger;
+    font-family: sans-serif;
+   
+ }

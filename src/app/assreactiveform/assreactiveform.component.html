@@ -1,0 +1,41 @@
+<div class="container mt-2"> 
+    <div class="row justify-content-center"> 
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <h3>Reactive Form Assigment</h3>
+         <form [formGroup]="myForm"  (ngSubmit)="OnSubmit()">
+            <div class="form-group">
+            <div formGroupName="projectDetails">  
+<label for="projectName">Project Name</label>
+<input type="text" class="form-control" formControlName="projectName" placeholder="Enter project Name">
+<div>
+<small class="text-danger" *ngIf="myForm.get('projectDetails.projectName') ?.errors?.required && myForm.get('projectDetails.projectName').touched">
+    Please enter valid project name</small>
+    <small class="text-danger" *ngIf="myForm.get('projectName')?.errors?.namesIsNotAllowed">Project name already exist</small>
+</div>
+<label for="email">Email</label>
+<input type="text" class="form-control" formControlName="email" placeholder="Enter email id">
+<div>
+<small class="text-danger"
+ *ngIf="!myForm.get('projectDetails.email').valid && myForm.get('projectDetails.email').touched">
+ <span *ngIf="myForm.get('projectDetails.email')?.errors?.required">Email is required </span>
+</small></div>
+<label for="project_Status">Project Status</label>
+<select formControlName="projectStatus" class="form-control" name="projectStatus" id="projectStatus">
+    <option>Stable</option>
+    <option>Critical</option>
+    <option>Finished</option>
+</select>
+<button type="submit" class="btn btn-success mt-2">Submit</button>
+<div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+    <h2 class="text-center">Form Data</h2>
+    <p>projectName: <strong>{{myForm.get('projectDetails.projectName').value}}</strong></p>
+    <p>Email: <strong>{{myForm.get('projectDetails.email').value}}</strong></p>
+    <p>project_Status: <strong>{{myForm.get('projectDetails.projectStatus').value}}</strong></p>
+    
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
